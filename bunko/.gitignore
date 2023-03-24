@@ -1,0 +1,35 @@
+# .gitignore
+
+# default
+# : dotfiles and dotdirectory is ignored.
+#   (except .gitignore, .editorconfig and .latexmkrc).
+
+.*
+!.gitignore
+!.editorconfig
+!.latexmkrc
+
+# LaTeX temporary files
+
+*.aux
+*.bbl
+*.blg
+*.bst
+*.fdb_latexmk
+*.fls
+*.idx
+*.ilg
+*.ind
+*.lof
+*.log
+*.lol
+*.lot
+*.ltjruby
+*.nav
+*.out
+*.snm
+*.toc
+*.xmpi
+*.pdf
+
+!bunko-title/bunko-title.pdf

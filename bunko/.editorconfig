@@ -1,0 +1,31 @@
+# .editorconfig
+# =============
+
+# base config
+# -----------
+
+root = true
+
+[*]
+# 文字コードはutf-8
+charset = utf-8
+# 改行コードはlinux系
+end_of_line = lf
+# 行末の余分な空白は削除
+trim_trailing_whitespace = true
+# ファイル末に空行を挿入
+insert_final_newline = true
+# 半角空白でインデント
+indent_style = space
+# インデント幅は2
+indent_size = 2
+
+[Makefile]
+# 半角空白でインデント
+indent_style = tab
+# インデント幅は4
+indent_size = 4
+
+[*.tex]
+# インデント幅は4
+indent_size = 4
