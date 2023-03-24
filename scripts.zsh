@@ -5,5 +5,5 @@ function ytb() {
 }
 
 function ytp() {
-  cp -r $ZDOTDIR/yspkg-templates/prime ./
+  cp -r $ZDOTDIR/yspkg-templates/prise ./
 }
