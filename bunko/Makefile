@@ -3,6 +3,8 @@ all:
 	make title.pdf
 	make colophon.pdf
 	make main.pdf
+	make bundle.pdf
+	make cropmark.pdf
 	make bunko-title.pdf
 
 .PHONY: cleanup
@@ -18,9 +20,15 @@ main.pdf: _typesetting/main.tex
 colophon.pdf: _typesetting/colophon.tex
 	cd _typesetting && latexmk colophon.tex
 
-bunko-title.pdf: title.pdf main.pdf colophon.pdf
+bundle.pdf: title.pdf main.pdf colophon.pdf
 	pdfunite \
 		_typesetting/title.pdf \
 		_typesetting/main.pdf \
 		_typesetting/colophon.pdf \
-		bunko-title/bunko-title.pdf
+		_typesetting/bundle.pdf
+
+cropmark.pdf: _typesetting/bundle.pdf
+	cd _typesetting && latexmk cropmark.tex
+
+bunko-title.pdf: _typesetting/cropmark.pdf
+	mv _typesetting bunko-title/bunko-title.pdf
